@@ -1,0 +1,106 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, enu, nav, output, ruby, section, summary,time, mark, audio, video 
+{margin: 0;	padding: 0;	border: 0;	font-size: 100%; font: inherit;	vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {	content: ''; content: none;}
+table {	border-collapse: collapse;border-spacing: 0;}
+strong { font-weight: bold;}
+/* round corner helper classes */
+.round-tl, .round {
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;    
+}
+.round-tr, .round {
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;    
+}
+.round-bl, .round {
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;    
+}
+.round-br, .round {
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-right-radius: 5px;    
+}
+/* shadow helper classes*/
+.shadow {
+    -moz-box-shadow: 0 0 10px 2px #343434;
+    -webkit-box-shadow: 0 0 10px 2px #343434;
+    box-shadow: 0 0 10px 2px #343434;        
+}
+.shadow.hover, .shadow:hover:not(.nohover){
+    -moz-box-shadow: 0 0 10px 2px #343434;
+    -webkit-box-shadow: 0 0 10px 2px #343434;
+    box-shadow: 0 0 10px 2px #cccccc;
+}
+.tshadow {text-shadow: 2px 2px 2px #aaa; }
+
+/* morehelper classes */
+.hide { display: none;}
+.left { float: left;}
+.right { float: right;}
+.clear { clear: both;}
+.center { text-align: center;}
+.noborder{ border: 0 !important;}
+.capitalise { text-transform: capitalize; }
+.fade { -webkit-transition: opacity 0.5s ease;}
+.translucent { opacity: 0.2;}
+.transparent { opacity: 0;}
+
+#overlay.hide {opacity: 0;}
+#overlay{ z-index: 10; position: fixed; top:0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.93;}
+#overlay > * {z-index: 11;}
+
+/* basic stuff */
+body {  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; background-color: #212121; color: #ccc;}
+
+a {color: #ccc; text-decoration: none;}
+a:hover{ color: #3E94D1;}
+
+div#top { padding: 10px;}
+div#top > h1 { text-align: center; font-size: 150%; }
+/*file list */
+ul.fileList { display: none; margin-left: 85px; background-color: #67747E; position: absolute;}
+ul.fileList > li { }
+ul.fileList > li > a {margin: 3px; display: block; border-bottom: 1px solid #ccc;}
+ul.fileList > li:last-child > a { border: 0;}
+ul.fileList > li:hover, ul.fileList li.active { background-color: #2F373D; } 
+ul.fileList > li:hover a, ul.fileList li.active a {color: #ED9D35;}
+ul.fileList > li > ul {display: none; margin-left: 10px; background-color: #FFB24D; color: black; padding: 5px; position: absolute; right: -185px;}
+ul.fileList > li:hover > ul {display: block;}
+ul.fileList > li > ul >li { }
+div.fileList {}
+div.fileList span {padding: 3px; background-color: #67747E; cursor: pointer;}
+
+div#app {}
+div#app  h1 { margin-bottom: 0.5em; font-weight: bold; font-size: 2em;}
+/*graph */
+div#graph .overview{height: 50px; margin-left: 41px; margin-right: 12px;}
+div#graph div.graph {margin: 10px; margin-top: 0; height: 150px; }
+div#tooltip { position: absolute; padding: 4px; background-color: #10456A; color: #ccc; opacity: 0.80;}
+div.xAxis > div:last-child{ display: none;}
+/* log list styles */
+ul.logList { list-style-type: none; height: 100%; overflow-x: hidden; overflow-y: scroll;}
+ul.logList li { background-color: #282829; padding: 5px; border-bottom: 1px solid black;  white-space: nowrap; overflow:hidden;}
+ul.logList li:nth-child(odd) { background-color: #323334; }
+ul.logList.wrap li, ul.logList li:hover {white-space:normal; word-wrap: break-word;}
+/*search bar */
+#query {overflow:hidden; margin: 0 10px;}
+#query input{ width: 99%;  border: 1px solid black; padding: 5px; margin: 0;}
+#query input.invalid { background-color: #FFB24D;}
+/*upload progress */
+div#name { margin: auto; margin-top: 50px; font-size: 150%; font-weight: bold; text-align: center;}
+div#progress { width: 300px; height: 20px; border: 2px solid #ccc; padding: 0; margin:auto;}
+div#progress > div { height: 20px; width: 0; background-color: #FFA32B;}
+div#progress > span { }

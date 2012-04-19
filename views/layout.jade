@@ -1,0 +1,26 @@
+!!! 5
+html
+	head
+		meta(charset='UTF-8')
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='https://www.google.com/jsapi?key=ABQIAAAAwAhM9HEfk247K8mMaKxpoRRC4pUEJS99I9IAaMrp7TkkwefbUBTrOkrRjFhpazjswbKC_NWjUbSz8w', type='text/javascript')
+		script(type='text/javascript')
+			google.load("jquery", "1");
+			google.load("jqueryui", "1");
+		//script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js')
+		//script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.1.7/underscore-min.js')
+		//script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js')
+		//script(type='text/javascript', src='http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js')
+		//http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.7.0/socket.io.min.js
+		script(type='text/javascript', src='/socket.io/socket.io.js')
+		script(type='text/javascript', src='/javascripts/runtime.min.js')
+		script(type='text/javascript', src='/javascripts/flot/jquery.flot.min.js')
+		script(type='text/javascript', src='/javascripts/flot/jquery.flot.selection.min.js')
+		script(type='text/javascript', src='/javascripts/flot/jquery.flot.resize.min.js')
+		//script(type='text/javascript', src='/javascripts/model.js')
+		//script(type='text/javascript', src='/javascripts/view.js')
+		script(type='text/javascript', src='/javascripts/main.js')
+		script(type='text/javascript')
+			!{templates}
+	body#drop!= body
